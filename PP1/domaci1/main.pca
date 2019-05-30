@@ -1,0 +1,52 @@
+		n=1 ;broj clanova
+		a=2 ;skup
+		sled=3 ;dva puta manji od sledeceg clana
+		pre=4 ;dva puta veci od prethodnog clana
+		b=5  ;brojac
+		m=6 ;granica
+		i=7 ;kostanta broj 2,koju koristim prilikom provere
+		
+		a_start=100
+		
+		ORG 8 
+		
+		mov a,#a_start
+		
+ponovo:	in n
+		beq n,0,kraj
+		bgt 0,n,kraj
+		
+		
+		in (a),n
+		sub b,n,1   ;posto preskacemo prvi clan,smanjujemo brojac
+		add a,a,1   ;preskacemo prvi clan jer nema prethodnika
+		sub b,b,1   ;takodje preskacemo i poslednji clan jer nema sledbenika
+		add sled,a,#n
+		sub pre,a,#n
+		mov i,#a
+		
+		
+		jsr provera
+		
+		beq n,n,ponovo
+		
+kraj:	stop
+
+provera:mul m,(pre),i
+		beq m,(a),dobro
+		beq n,n,skok
+		
+dobro:	mul m,(a),i
+		beq m,(sled),jeste
+		beq n,n,skok
+		
+jeste:	out (a)
+
+skok:	add a,a,1
+		add sled,sled,1
+		add pre,pre,1
+		sub b,b,1
+		beq b,0,zavrsetak
+		beq n,n,provera
+		
+zavrsetak: rts
