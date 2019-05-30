@@ -1,0 +1,11 @@
+Janko 19.02.2015. 1004 last_minute
+Nena 20.03.2017. 500 Zakintos
+Branko 04.04.2017. 2404 first_minute_magazin
+Branko 01.01.2002. 1021 novogodisnja_putovanja
+Aleksa 17.12.2016. 500 zimovanje
+Aleksa 11.03.2017. 357 letovanje
+Aleksa 10.04.2016. 1500 ekskurzije
+Aleksa 15.01.2016. 750 first_minute
+Aleksa 17.07.2017. 1034 daleke_destinacije
+Zoran 29.09.2010. 2043 plate
+
