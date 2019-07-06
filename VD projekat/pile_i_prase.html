@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Dostava hrane | Pile&Prase | Hrana</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="prvih_6/izgled.css">
+
+</head>
+
+<body background="img/background.jpg">
+<script>
+	function dodaj1()
+	{
+		alert("porudžbina je dodata");
+	var selectElem = document.getElementById("kol1");
+	//alert(selectElem);
+	var index = selectElem.selectedIndex;
+	//	alert(index);
+		
+		localStorage.setItem("pile-1",(index+1)*350);
+	//	alert(localStorage.getItem("pile-1"));
+	}
+	
+	function dodaj2()
+	{
+		alert("porudžbina je dodata");
+	var selectElem = document.getElementById("kol2");
+	//alert(selectElem);
+	var index = selectElem.selectedIndex;
+	//	alert(index);
+		
+		localStorage.setItem("pile-2",(index+1)*250);
+	//	alert(localStorage.getItem("pile-2"));
+	}
+	
+	function dodaj3()
+	{
+		alert("porudžbina je dodata");
+	var selectElem = document.getElementById("kol3");
+	//alert(selectElem);
+	var index = selectElem.selectedIndex;
+	//	alert(index);
+		
+		localStorage.setItem("pile-3",(index+1)*350);
+	//	alert(localStorage.getItem("pile-3"));
+	}
+	
+	function dodaj4()
+	{
+		alert("porudžbina je dodata");
+	var selectElem = document.getElementById("kol4");
+	//alert(selectElem);
+	var index = selectElem.selectedIndex;
+	//	alert(index);
+		
+		localStorage.setItem("pile-4",(index+1)*200);
+	//	alert(localStorage.getItem("pile-4"));
+	}
+	
+	function ukloni1()
+	{
+	//	alert(localStorage.getItem("pile-1"));
+		localStorage.removeItem("pile-1")
+	//	alert(localStorage.getItem("pile-1"));
+	}
+	
+	function ukloni2()
+	{
+	//	alert(localStorage.getItem("pile-2"));
+		localStorage.removeItem("pile-2")
+	//	alert(localStorage.getItem("pile-2"));
+	}
+		function ukloni3()
+	{
+	//	alert(localStorage.getItem("pile-3"));
+		localStorage.removeItem("pile-3")
+	//	alert(localStorage.getItem("pile-3"));
+	}
+		function ukloni4()
+	{
+	//	alert(localStorage.getItem("pile-4"));
+		localStorage.removeItem("pile-4")
+	//	alert(localStorage.getItem("pile-4"));
+	}
+
+	function pretraga(){
+            var pret = document.forma.pre.value;
+            var prov = 1;
+            pret = pret.toLowerCase();
+            if(pret != ""){
+                var test = "toro latin gastrobar";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("del_toroInfo.html", "_self");
+                }
+                var test = "brooklyn pizza";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("brooklyn_pizzaInfo.html", "_self");
+                }
+                var test = "fit bar";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("fitbarInfo.html", "_self");
+                }
+                var test = "mcdonalds";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("mcdonaldsInfo.html", "_self");
+                }
+                var test = "meat and meet";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("meatandmeetInfo.html", "_self");
+                }
+                var test = "obrok handmade";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("obrokInfo.html", "_self");
+                }
+                var test = "pile i prase pile&prase";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("pileipraseInfo.html", "_self");
+                }
+                var test = "ping pong pauza";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("ping_pongInfo.html", "_self");
+                }
+                var test = "sac";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("sacInfo.html", "_self");
+                }
+                var test = "stanica 1884";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("stanica1884Info.html", "_self");
+                }
+                var test = "walter";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("walterInfo.html", "_self");
+                }
+                var test = "zapata";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("zapataInfo.html", "_self");
+                }  
+            }else{
+                prov = 0;
+                alert("Niste uneli nista za pretragu! Pokusajte ponovo");
+            }
+            if(prov == 1){
+                alert("Ne postoji restoran sa recju koji ste uneli, pokusajte ponovo !");
+            }
+        }
+</script>
+
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="img/logo.png" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper bg-info">
+        <!-- Close Btn -->
+        <div class="close-btn bg-danger"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container bg-info">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post" name = "forma">
+                        <input type="search" id = "pre" placeholder="Ukucajte šta vam treba...">
+                        <div class = "btn btn-info" onclick="pretraga()"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <!-- Breaking News -->
+                    <div class="col-12 col-sm-4">
+                        <div class="breaking-news">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Dobrodosli na nas sajt!</a></li>
+                                    <li><a href="#">IZGLEDA DA STE GLADNI!</a></li>
+                                    <li><a href="#">ne zadugo!</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-12 col-sm-5">
+                        <h6 style="padding-top: 5px"><i><b>Dostava hrane ! pozovite 011/2356-89 ili 064/89-996-13</b></i></h6>
+                    </div>
+                    
+                    <div class = "col-12 col-sm-3 text-center">                   
+                    <a href="#">
+                        <img src="img/serbia.png" width="30" height="30" alt="">
+                    </a>
+                    <a href="pile_i_prase_eng.html">
+                        <img src="img/uk.png" width="30" height="30" alt="">
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="index.html"><img src="img/logo.png" alt="" style="height: 75%; width: 75%"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Početna</a></li>
+                                    
+                                    <li><a href="restorani.html">Restorani</a>
+                                        <ul class="dropdown">
+                                            <li><a href = "restorani.html">Pregled restorana</a></li>
+                                            <li><a href="opstine.html">Opstine</a>
+                                                <ul class = "dropdown">
+                                                    <li><a href="starigrad.html">Stari Grad</a></li>
+                                                    <li><a href="savskivenac.html">Savski Venac</a></li>
+                                                    <li><a href="palilula.html">Palilula</a></li>
+                                                    <li><a href="zvezdara.html">Zvezdara</a></li>
+                                                    <li><a href="zemun.html">Zemun</a></li>
+                                                    <li><a href="vracar.html">Vracar</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class = "active"><a href="dostava.html">Dostava</a>
+                                        <ul class = "dropdown">
+                                            <li><a href="dostava.html">Pregled hrane</a></li>
+                                            <li><a href="#">Vrsta restorana</a>
+                                            <ul class = "dropdown">
+                                                <li><a href="srpskahrana.html">Srpska hrana</a></li>
+                                                <li><a href="kineskahrana.html">Kineska hrana</a></li>
+                                                <li><a href="meksickahrana.html">Meksicka hrana</a></li>
+                                                <li><a href="italijanskahrana.html">Italijanska hrana</a></li>
+                                                <li><a href="zdravahrana.html">Zdrava hrana</a></li>
+                                                <li><a href="fastfood.html">Fast-food</a></li>
+                                                <li><a href="ostalahrana.html">Ostalo</a></li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="moje_narudzbine.html">Moje narudzbine</a></li>
+                                    <li><a href="contact.html">O nama</a></li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <div class="search-btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <hr/>
+<form name="pileiprase">
+    <nav aria-label="breadcrumb" class="col-sm-8 offset-sm-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Pocetna</a></li>
+            <li class="breadcrumb-item"><a href="dostava.html">Dostava</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pile&Prase | Hrana</li>
+        </ol>
+    </nav>
+
+    <hr/>
+
+	<div class="media offset-sm-1 col-sm-10 border border-success">
+  		<img  class="slike"  src="prvih_6/pile.1.jpg" alt="Generic placeholder image">
+  		<div class="col-sm-5" style="padding-top: 10px">
+    		<h5 class="mt-0"><b>Gurmanska pljskavica</b></h5>
+    	<b><br/>
+			 <b/><br/>
+			<br/>
+			cena: <b> 350.00 <b/>
+		</div>
+    		<div class = "offset-sm-2 col-sm-3" align="right" style="padding-top: 50px">
+			<table>
+			<tr >
+			<td >
+			<input type="button" class="btn btn-success" value="PORUČI" onclick="dodaj1()"> 
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<select id="kol1" >
+				<option value="1"> 1</option>
+				<option value="2"> 2</option>
+				<option value="3"> 3</option>
+				<option value="4"> 4</option>
+			</select>	
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<input class="btn btn-danger" type="button" value="ODUSTANI" onclick="ukloni1()">
+			</td>
+			</tr>
+			</table>
+			</div>
+	</div>
+
+	<hr/>
+	<div class="media offset-sm-1 col-sm-10 border border-success">
+  		<img  class="slike" src="prvih_6/pile.2.jpg" alt="Generic placeholder image">
+  		<div class="col-sm-5" style="padding-top: 10px">
+    		<h5 class="mt-0"><b>Ćevapi u lepinji </b></h5>
+    	 <br/>
+			<br/>
+			cena: <b> 250.00 <b/>
+		</div>
+    		<div class = "offset-sm-2 col-sm-3" align="right" style="padding-top: 50px">
+			<table>
+			<tr >
+			<td >
+			<input type="button" class="btn btn-success" value="PORUČI" onclick="dodaj2()"> 
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<select id="kol2" >
+				<option value="1"> 1</option>
+				<option value="2"> 2</option>
+				<option value="3"> 3</option>
+				<option value="4"> 4</option>
+			</select>	
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<input class="btn btn-danger" type="button" value="ODUSTANI" onclick="ukloni2()">
+			</td>
+			</tr>
+			</table>
+			</div>
+	</div>
+
+	<hr/>
+
+	<div class="media offset-sm-1 col-sm-10 border border-success">
+  		<img  class="slike"  src="prvih_6/pile.3.jpg" alt="Generic placeholder image">
+  		<div class="col-sm-5" style="padding-top: 10px">
+    		<h5 class="mt-0"><b> Lepinja sa kajmakom </b></h5>
+				 <br/>
+			<br/>
+			cena: <b> 250.00 <b/>
+		</div>
+    		<div class = "offset-sm-2 col-sm-3" align="right" style="padding-top: 50px">
+			<table>
+			<tr >
+			<td >
+			<input type="button" class="btn btn-success" value="PORUČI" onclick="dodaj3()"> 
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<select id="kol3" >
+				<option value="1"> 1</option>
+				<option value="2"> 2</option>
+				<option value="3"> 3</option>
+				<option value="4"> 4</option>
+			</select>	
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<input class="btn btn-danger" type="button" value="ODUSTANI" onclick="ukloni3()">
+			</td>
+			</tr>
+			</table>
+			</div>
+	</div>
+
+	<hr/>
+
+		<div class="media offset-sm-1 col-sm-10 border border-success">
+  		<img class="slike" src="prvih_6/pile.4.jpg" alt="Generic placeholder image">
+  		<div class="col-sm-5" style="padding-top: 10px">
+    		<h5 class="mt-0"><b>Pomfrit</b></h5>
+    		<br/>
+			<br/>
+			cena: <b> 200.00 <b/>
+		</div>
+    		<div class = "offset-sm-2 col-sm-3" align="right" style="padding-top: 50px">
+			<table>
+			<tr >
+			<td >
+			<input type="button" class="btn btn-success" value="PORUČI" onclick="dodaj4()"> 
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<select id="kol4" >
+				<option value="1"> 1</option>
+				<option value="2"> 2</option>
+				<option value="3"> 3</option>
+				<option value="4"> 4</option>
+			</select>	
+			</td>
+			<td style="padding-left:15px;"> 
+			
+			<input class="btn btn-danger" type="button" value="ODUSTANI" onclick="ukloni4()">
+			</td>
+			</tr>
+			</table>
+			</div>
+	</div >
+	
+	<hr/>
+		
+
+	<!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.png" alt="" height="100px" width="100px"></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p>
+                    Copyright&copy; <script>document.write(new Date().getFullYear());</script> , Jovana Kitanović, Aleksa Bogdanović<br/>
+                    Odsek za softversko inženjerstvo Elektrotehnickog fakulteta u Beogradu
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+	</form>
+</body>
+
+</html>

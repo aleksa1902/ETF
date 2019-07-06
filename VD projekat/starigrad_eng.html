@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Food delivery | Stari Grad</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/logo.png">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function pretraga(){
+            var pret = document.forma.pre.value;
+            var prov = 1;
+            pret = pret.toLowerCase();
+            if(pret != ""){
+                var test = "toro latin gastrobar";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("del_toroInfo.html", "_self");
+                }
+                var test = "brooklyn pizza";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("brooklyn_pizzaInfo.html", "_self");
+                }
+                var test = "fit bar";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("fitbarInfo.html", "_self");
+                }
+                var test = "mcdonalds";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("mcdonaldsInfo.html", "_self");
+                }
+                var test = "meat and meet";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("meatandmeetInfo.html", "_self");
+                }
+                var test = "obrok handmade";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("obrokInfo.html", "_self");
+                }
+                var test = "pile i prase pile&prase";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("pileipraseInfo.html", "_self");
+                }
+                var test = "ping pong pauza";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("ping_pongInfo.html", "_self");
+                }
+                var test = "sac";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("sacInfo.html", "_self");
+                }
+                var test = "stanica 1884";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("stanica1884Info.html", "_self");
+                }
+                var test = "walter";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("walterInfo.html", "_self");
+                }
+                var test = "zapata";
+                var n = test.search(pret);
+                if(n >= 0){
+                    prov = 0;
+                    window.open("zapataInfo.html", "_self");
+                }  
+            }else{
+                prov = 0;
+                alert("You did not enter anything to search! Try again");
+            }
+            if(prov == 1){
+                alert("There is no restaurant with the word you entered, try again !");
+            }
+        }
+    </script>
+
+</head>
+
+<body background="img/background.jpg">
+    <!-- Preloader -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="img/logo.png" alt="">
+    </div>
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper bg-info">
+        <!-- Close Btn -->
+        <div class="close-btn bg-danger"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container bg-info">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post" name = "forma">
+                        <input type="search" id = "pre" placeholder="Search...">
+                        <div class = "btn btn-info" onclick="pretraga()"><i class="fa fa-search" aria-hidden="true"></i></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center justify-content-between">
+                    <!-- Breaking News -->
+                    <div class="col-12 col-sm-4">
+                        <div class="breaking-news">
+                            <div id="breakingNewsTicker" class="ticker">
+                                <ul>
+                                    <li><a href="#">Welcome to our site!</a></li>
+                                    <li><a href="#">LOOKS THAT YOU'RE HUNGRY!</a></li>
+                                    <li><a href="#">not anymore !</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-12 col-sm-5">
+                        <h6 style="padding-top: 5px"><i><b>Food delivery ! call 011/2356-89 or 064/89-996-13</b></i></h6>
+                    </div>
+                    
+                    <div class = "col-12 col-sm-3 text-center">                   
+                    <a href="starigrad.html">
+                        <img src="img/serbia.png" width="30" height="30" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="img/uk.png" width="30" height="30" alt="">
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="delicious-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" href="index_en.html"><img src="img/logo.png" alt="" style="height: 75%; width: 75%"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index_en.html">Home</a></li>
+                                    
+                                    <li class = "active"><a href="restorani_eng.html">Restaurants</a>
+                                        <ul class="dropdown">
+                                            <li><a href = "restorani_eng.html">Overview</a></li>
+                                            <li><a href="opstine_eng.html">Municipalities</a>
+                                                <ul class = "dropdown">
+                                                    <li><a href="starigrad_eng.html">Stari Grad</a></li>
+                                                    <li><a href="savskivenac_eng.html">Savski Venac</a></li>
+                                                    <li><a href="palilula_eng.html">Palilula</a></li>
+                                                    <li><a href="zvezdara_eng.html">Zvezdara</a></li>
+                                                    <li><a href="zemun_eng.html">Zemun</a></li>
+                                                    <li><a href="vracar_eng.html">Vracar</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="dostava_eng.html">Delivery</a>
+                                        <ul class = "dropdown">
+                                            <li><a href="dostava_eng.html">Food overview</a></li>
+                                            <li><a href="#">Type of restaurant</a>
+                                            <ul class = "dropdown">
+                                                <li><a href="srpskahrana_eng.html">Serbian food</a></li>
+                                                <li><a href="kineskahrana_eng.html">Chinese food</a></li>
+                                                <li><a href="meksickahrana_eng.html">Mexican food</a></li>
+                                                <li><a href="italijanskahrana_eng.html">Italian food</a></li>
+                                                <li><a href="zdravahrana_eng.html">Healthy food</a></li>
+                                                <li><a href="fastfood_eng.html">Fast-food</a></li>
+                                                <li><a href="ostalahrana_eng.html">Other</a></li>
+                                            </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="my_orders.html">My orders</a></li>
+                                    <li><a href="contact_en.html">About us</a></li>
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                                <div class="search-btn">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <hr/>
+
+    <nav aria-label="breadcrumb" class="col-sm-8 offset-sm-2">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index_en.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="restorani_eng.html">Restaurants</a></li>
+            <li class="breadcrumb-item"><a href="opstine_eng.html">Municipalities</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Stari Grad</li>
+        </ol>
+    </nav>
+
+    <hr/>
+
+    <div class="media offset-sm-1 col-sm-10 border border-success">
+        <img class="mr-3" src="img/Restorani/toro.jpg" alt="Generic placeholder image">
+        <div class="media-body col-sm-6" style="padding-top: 10px">
+            <h5 class="mt-0"><b>Toro Latin Gastro Bar</b></h5>
+            Chicken, International food, Mexican food, Latinoamerican food
+            Creative blend of Pan Latin styles and flavors will fascinate all your senses. Order and try!
+        </div>
+            <div class = "offset-sm-1 col-sm-3" align = "right" style="padding-top: 25px"><a class="btn delicious-btn mt-0" href="del_toroInfo_eng.html" role="button">Enter</a></div>
+    </div>
+
+    <hr/>
+
+    <div class="media offset-sm-1 col-sm-10 border border-success">
+        <img class="mr-3" src="img/Restorani/1706.jpg" alt="Generic placeholder image">
+        <div class="media-body col-sm-6" style="padding-top: 10px">
+            <h5 class="mt-0"><b>Ping Pong Pauza</b></h5>
+            Sandwiches, Chicken, Fish and Sea, Asian food, Chinese food, Japanese food
+            Take a break and enjoy with Chinese and Japanese dishes, which will open up all your senses!
+        </div>
+            <div class = "offset-sm-1 col-sm-3" align = "right" style="padding-top: 25px"><a class="btn delicious-btn mt-0" href="ping_pongInfo_eng.html" role="button">Enter</a></div>
+    </div>
+
+    <hr/>
+
+    <div class="media offset-sm-1 col-sm-10 border border-success">
+        <img class="mr-3" src="img/Restorani/mc.jpg" alt="Generic placeholder image">
+        <div class="media-body col-sm-6" style="padding-top: 10px">
+            <h5 class="mt-0"><b>McDonald's</b></h5>
+            Grill, Chicken, Desserts, Burgers, American food
+            One of the world greatest brands. Known for distinctively high standards, best quality products and fast and good service.Order online and delivery from McDonald's is on your way.
+        </div>
+            <div class = "offset-sm-1 col-sm-3" align = "right" style="padding-top: 25px"><a class="btn delicious-btn mt-0" href="mcdonaldsInfo_eng.html" role="button">Enter</a></div>
+    </div>
+
+    <hr/>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <a href="index.html"><img src="img/logo.png" alt="" height="100px" width="100px"></a>
+                    </div>
+                    <!-- Copywrite -->
+                    <p>
+                    Copyright&copy; <script>document.write(new Date().getFullYear());</script> , Jovana Kitanović, Aleksa Bogdanović<br/>
+                    Department of Software Engineering, Faculty of Electrical Engineering, Belgrade
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
