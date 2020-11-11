@@ -142,6 +142,14 @@ int main() {
 	std::cout << "Minimal graph : ";
 
 	for (int i = 0; i < sizeOutput; i++) {
+		std::cout << bestFit[i] << " ";
+
+		if ((i + 1) % 2 == 0 && i < 2 * numBranch)
+			std::cout << " - ";
+	}
+	std::cout << "\n";
+
+	for (int i = 0; i < sizeOutput; i++) {
 		std::cout << city[bestFit[i] - 1] << " ";
 
 		if ((i + 1) % 2 == 0 && i < 2*numBranch)
@@ -156,6 +164,13 @@ int main() {
 	myfile << "Time between start and end : " << elapsed_secs << " s \n";
 	myfile << "Minimal cost is : " << minCost << "\n";
 	myfile << "Minimal graph : ";
+
+	//for (int i = 0; i < sizeOutput; i++) {
+		//myfile << << bestFit[i] << " ";
+
+	//	if ((i + 1) % 2 == 0 && i < 2 * numBranch)
+	//		myfile << " - ";
+	//}
 
 	for (int i = 0; i < sizeOutput; i++) {
 		myfile << city[bestFit[i] - 1] << " ";
