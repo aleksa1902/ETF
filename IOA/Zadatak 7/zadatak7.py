@@ -54,7 +54,7 @@ for i in range(20):
         
         newX = np.array(x, copy=True)
         
-        for k in random.sample(range(64), int(np.round(18 - 18 * j / 100000))):
+        for k in random.sample(range(64), int(np.round(32 - 24 * j / 100000))):
             if(newX[k] == 1):
                 newX[k] = 0
             else:
